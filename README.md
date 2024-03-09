@@ -1,6 +1,6 @@
-# Technology stack used
+# MERN FULL STACK Chatting application
 
-REACT, NODEJS, EXPRESSJS, MONGODB - MERN FULL STACK Chatting application
+REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used
 
 ## Use on your local machine
 
