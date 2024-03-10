@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Message from './Message'
 import useGetMessages from '../hooks/useGetMessages'
+import useListenMessages from '../hooks/useListenMessages'
 
 const Messages = () => {
 
   const {isLoading, messages} = useGetMessages();
+  useListenMessages();
 
   return (
     <Container>

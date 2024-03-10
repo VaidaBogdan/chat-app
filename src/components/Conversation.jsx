@@ -1,14 +1,16 @@
 import styled from "styled-components"
 import { useConversation } from "../hooks/useConversation";
+import { useSocketContext } from "../context/SocketContext";
 
 export const Conversation = ({conversation}) =>{
 
     const {selectedConversation, setSelectedConversation} = useConversation();
     const isSelected = selectedConversation?._id === conversation._id;
-
+    const {onlineUsers} = useSocketContext();
+    const isOnline = onlineUsers.includes(conversation._id);
 
     return(
-        <Container data-isselected={isSelected} onClick={() => setSelectedConversation(conversation)}>
+        <Container data-isselected={isSelected} data-isonline={isOnline} onClick={() => setSelectedConversation(conversation)}>
             <div className="user-info">
                 <p className="user-name">{conversation.username}</p>
             </div>
@@ -30,7 +32,7 @@ const Container = styled.div `
     color: ${props => props['data-isselected'] ? 'white' : 'black'};
     flex: 1 1 0%;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 3px solid ${props => props['data-isonline'] ? 'darkgreen' : 'black'};
     .user-info{
         display: flex;
         justify-content:space-between;

@@ -1,3 +1,4 @@
+const { getIO, getReceiverSocketId } = require('../socket/socketUtils');
 const Conversation = require("../model/conversationModel");
 const Message = require("../model/messageModel");
 
@@ -12,7 +13,6 @@ module.exports.sendMessage = async(req, res) =>{
             participants: {$all: [senderId, receiverId]}
         })
 
-        //make one if there isnt one
         if(!conversation){
             conversation = await Conversation.create({
                 participants:[senderId, receiverId]
@@ -31,9 +31,14 @@ module.exports.sendMessage = async(req, res) =>{
             res.status(400).json({error: "Message data error"});
         }
 
-        //SOCKET.IO INTEGRATION GOES HERE!!!!!
         await newMessage.save()
         await conversation.save();
+
+        const receiverSocketId = getReceiverSocketId(receiverId);
+        if(receiverSocketId){
+            const ioInstance = getIO();
+            ioInstance.to(receiverSocketId).emit("newMessage", newMessage);
+        }
 
         res.status(201).json(newMessage)
 
