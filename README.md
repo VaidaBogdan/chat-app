@@ -1,4 +1,4 @@
-# MERN FULL STACK Chatting application
+# MERN FULL STACK Real-Time chatting application
 
 REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used
 
@@ -6,7 +6,7 @@ REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used
 
 First, clone the git repository:
 ```bash
-git clone https://github.com/VaidaBogdan/chat-app/chat-app
+git clone https://github.com/VaidaBogdan/chat-app
 ```
 
 Then, install all the dependencies:
