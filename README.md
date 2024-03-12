@@ -30,3 +30,7 @@ npm start
 
 [check it out here](https://chat-app-bogdan.onrender.com/)  
 (might take a bit to load up the first time) ~ via render
+
+## Preview
+
+![chat](https://github.com/VaidaBogdan/chat-app/assets/75423583/df72b4fd-10a9-4980-a5bd-2ebda6495001)
