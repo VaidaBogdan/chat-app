@@ -1,9 +1,10 @@
 # MERN FULL STACK Real-Time chatting application
 
-REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used
-Real-Time using socket.io, online users are displayed and messages are received instantly.
-Basic styling using styled-components.
-Custom hooks for making the code easier to read.
+REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used  
+I created this basic chatting application  
+Real-Time using socket.io, online users are displayed and messages are received instantly  
+Basic styling using styled-components (no custom css)
+Custom hooks for making the code easier to read  
 
 ## Use on your local machine
 
@@ -27,5 +28,5 @@ npm start
 ```
 ## Deployment
 
-[check it out here](https://chat-app-bogdan.onrender.com/)
+[check it out here](https://chat-app-bogdan.onrender.com/)  
 (might take a bit to load up the first time) ~ via render
