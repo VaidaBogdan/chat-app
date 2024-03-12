@@ -27,5 +27,5 @@ npm start
 ```
 ## Deployment
 
-[check it out here](https://chat-app-bogdan.onrender.com/)https://chat-app-bogdan.onrender.com/
+[check it out here](https://chat-app-bogdan.onrender.com/)
 (might take a bit to load up the first time) ~ via render
