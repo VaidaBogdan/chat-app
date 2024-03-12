@@ -3,7 +3,7 @@
 REACT, NODEJS, EXPRESSJS, MONGODB - Technology stack used  
 I created this basic chatting application  
 Real-Time using socket.io, online users are displayed and messages are received instantly  
-Basic styling using styled-components (no custom css)
+Basic styling using styled-components (no custom css)  
 Custom hooks for making the code easier to read  
 
 ## Use on your local machine
